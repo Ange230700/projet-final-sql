@@ -1,6 +1,6 @@
 from django.shortcuts import render
-# from .models import Projet
+from .models import Departement
 
 def index(request):
-    
-    return render(request,'insert.html')
+    departement=Departement.objects.all 
+    return render(request,'departement.html',{"departement":departement})
