@@ -19,3 +19,21 @@ class Employe(models.Model):
     nombre_d_enfants = models.IntegerField()
     conges_payes_restants = models.IntegerField()
     responsable_hierarchique = models.IntegerField()
+
+class Postes(models.Model):
+    id = models.IntegerField(primary_key=True)
+    Nom = models.CharField(max_length=100)
+    Niveau_hiérarchique = models.CharField(max_length=100)
+    Salaire = models.IntegerField()
+    Département_id = models.IntegerField()
+    Statutposte = models.BooleanField()
+    type_contrat = models.IntegerField()
+
+
+class Departement(models.Model):
+    id = models.IntegerField(primary_key=True)
+    nom = models.CharField(max_length=100)
+    nombre_personne_departement = models.IntegerField()
+    date_de_creation_du_departement = models.DateField()
+    budget_annuel_du_departement = models.IntegerField()
+    responsable_departement = models.IntegerField()
