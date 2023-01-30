@@ -35,7 +35,7 @@
     letter-spacing: 1px;
     color: white;
     padding: 30px 0;
-}
+    }
 
 /* Table Styles */
 
@@ -147,8 +147,67 @@
         display: block;
         text-align: center;
     }
+    
+}
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
 }
 
+button {
+    margin-top:-40px;
+    margin-left:10px;
+
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #B67FBC;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #326E99 74%);
+	background-size: 200% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+	transition: 500ms;
+}
+
+button:before {
+	color: rgba(255,255,255,0.5);
+	font-size: 16px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 140px;
+	height: 40px;
+	background-color: #1b2845;
+	background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+	transition: 500ms;
+}
+
+button:hover {
+	background-position: right;
+}
+
+button:hover:before {
+	color: rgba(255,255,255,0.8);
+}
+
+button:focus {
+	outline: none;
+}
+.butttonrow{
+    flex-direction: row;
+    display: flex;
+
+}
 
 </style>
 <body>
@@ -156,9 +215,14 @@
         <div class="titleHeader">
             <h1>SQL</h1>
         </div>
-        <form action="/admin" method="GET">
-        <button type="submit" name="admin">ADMIN</button>
-        </form>
+        <div class="butttonrow">
+            <form action="/admin" method="GET">
+            <button type="submit" name="admin" class="noselect">ADMIN</button>
+            </form>
+            <form action="/employe" method="GET">
+            <button type="submit" class="noselect">EMPLOYE</button>
+            </form>
+        </div>
     </div>    
     <div class="table-wrapper">
     <table class="fl-table">
