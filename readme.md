@@ -10,7 +10,7 @@ lancer la commande ``` cd mysite ``` il faut rentrer dans le dossier "mysite"
 
 lancer la commande ``` python manage.py runserver ```
 
-Vous n'avez plus qu'à cliquer et vous balader sur notre site
+Vous n'avez plus qu'àd cliquer et vous balader sur notre site
 
 Pour nous connecter sur admin vous pouvez utiliser le super user à votre disposition avec identfiant : UserSuper Mdp : 123456789
 
