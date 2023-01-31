@@ -8,7 +8,7 @@ from django.core.paginator import Paginator
 
 def indexDepartement(request):
     departement=Departement.objects.all()
-    paginator = Paginator(departement, 10) # Show 25 contacts per page
+    paginator = Paginator(departement, 2) # Show 10 contacts per page
 
     page2 = request.GET.get('page2')
     departements = paginator.get_page(page2)
@@ -16,7 +16,7 @@ def indexDepartement(request):
 
 def indexEmploye(request):
     employe=Employe.objects.all()
-    paginator = Paginator(employe, 10) # Show 25 contacts per page
+    paginator = Paginator(employe, 2) # Show 10 contacts per page
 
     page = request.GET.get('page')
     employes = paginator.get_page(page)
@@ -24,7 +24,7 @@ def indexEmploye(request):
 
 def indexPoste(request):
     poste=Postes.objects.all()
-    paginator = Paginator(poste, 10) # Show 25 contacts per page
+    paginator = Paginator(poste, 2) # Show 10 contacts per page
 
     page = request.GET.get('page')
     postes = paginator.get_page(page)

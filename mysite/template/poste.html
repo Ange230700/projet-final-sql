@@ -259,8 +259,8 @@ button:focus {
         <div class="pagination">
         <span class="step-links">
             {% if postes.has_previous %}
-                <a href="?page2=1">&laquo; first</a>
-                <a href="?page2={{ postes.previous_page_number }}">previous</a>
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ postes.previous_page_number }}">previous</a>
             {% endif %}
 
             <span class="current">
@@ -268,8 +268,8 @@ button:focus {
             </span>
 
             {% if postes.has_next %}
-                <a href="?page2={{ postes.next_page_number }}">next</a>
-                <a href="?page2={{ postes.paginator.num_pages }}">last &raquo;</a>
+                <a href="?page={{ postes.next_page_number }}">next</a>
+                <a href="?page={{ postes.paginator.num_pages }}">last &raquo;</a>
             {% endif %}
         </span>
     </div>
