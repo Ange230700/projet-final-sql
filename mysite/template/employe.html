@@ -247,8 +247,11 @@ button:focus {
             <form action="/admin" method="GET">
             <button type="submit" name="admin" class="noselect">ADMIN</button>
             </form>
-            <form action="/" method="GET">
+            <form action="/Departement" method="GET">
             <button type="submit" class="noselect">DEPARTEMENT</button>
+            </form>
+            <form action="/Poste" method="GET">
+            <button type="submit" class="noselect">POSTES</button>
             </form>
         </div>
     </div>
@@ -267,7 +270,6 @@ button:focus {
             <th>email</th>
             <th>numero Tel</th>
             <th>Sexe</th>
-            <th>DEPARTEMENT id</th>
             <th>conge Payé restant</th>
 
         </tr>
@@ -283,9 +285,6 @@ button:focus {
             <td>{{i.numero_tel}}</td>
             <td>{{i.genre}}</td>
             <td>
-            {{i.departement_id}}
-            </td>
-            <td>
             {{i.conges_payes_restants}}
             </td>
         </tr>
@@ -299,7 +298,6 @@ button:focus {
             <th>date de naissance</th>
             <th>numero employe</th>
             <th>nombre enfant</th>
-            <th>responsable_hierarchique</th>
         </tr>
         </thead>
         <tbody>
@@ -313,8 +311,6 @@ button:focus {
             <td>{{i.numero_d_employe}}</td>
             <td>{{i.nombre_d_enfants}}
             </td>
-            <td>{{i.responsable_hierarchique}}
-            </td>    
         </tr>
         <tbody>
         </table>

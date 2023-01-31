@@ -222,8 +222,8 @@ button:focus {
             <form action="/" method="GET">
             <button type="submit" class="noselect">EMPLOYE</button>
             </form>
-            <form action="/Poste" method="GET">
-            <button type="submit" class="noselect">POSTES</button>
+            <form action="/Departement" method="GET">
+            <button type="submit" class="noselect">DEPARTEMENT</button>
             </form>
         </div>
     </div>    
@@ -232,21 +232,23 @@ button:focus {
         <thead>
         <tr>
             <th>Nom</th>
-            <th>nombre_personne_departement</th>
-            <th>date_de_creation_du_departement</th>
-            <th>budget_annuel_du_departement</th>
-            <th>responsable_departement</th>
+            <th>Niveau_hiérarchique</th>
+            <th>Salaire</th>
+            <th>Département_id</th>
+            <th>Statutposte</th>
+            <th>type_contrat</th>
         </tr>
         </thead>
         <tbody>
-        {% for i in departement%}
+        {% for i in postes%}
         <tr>
         
-            <td>{{i.nom}}</td>
-            <td>{{i.nombre_personne_departement}}</td>
-            <td>{{i.date_de_creation_du_departement}}</td>
-            <td>{{i.budget_annuel_du_departement}}</td>
-            <td>{{i.responsable_departement}}</td>
+            <td>{{i.Nom}}</td>
+            <td>{{i.Niveau_hiérarchique}}</td>
+            <td>{{i.Salaire}}</td>
+            <td>{{i.Département_id}}</td>
+            <td>{{i.Statutposte}}</td>
+            <td>{{i.type_contrat}}</td>
 
             
         </tr>
@@ -256,18 +258,18 @@ button:focus {
 </div>
         <div class="pagination">
         <span class="step-links">
-            {% if departement.has_previous %}
+            {% if postes.has_previous %}
                 <a href="?page2=1">&laquo; first</a>
-                <a href="?page2={{ departement.previous_page_number }}">previous</a>
+                <a href="?page2={{ postes.previous_page_number }}">previous</a>
             {% endif %}
 
             <span class="current">
-                Page {{ departement.number }} of {{ departement.paginator.num_pages }}.
+                Page {{ postes.number }} of {{ postes.paginator.num_pages }}.
             </span>
 
-            {% if departement.has_next %}
-                <a href="?page2={{ departement.next_page_number }}">next</a>
-                <a href="?page2={{ departement.paginator.num_pages }}">last &raquo;</a>
+            {% if postes.has_next %}
+                <a href="?page2={{ postes.next_page_number }}">next</a>
+                <a href="?page2={{ postes.paginator.num_pages }}">last &raquo;</a>
             {% endif %}
         </span>
     </div>
